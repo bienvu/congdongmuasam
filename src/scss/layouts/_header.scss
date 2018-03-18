@@ -1,0 +1,143 @@
+.header {
+  position: relative;
+  z-index: 3;
+
+  @include susy-media(mobileOnly) {
+    .container {
+      margin: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include susy-media(mobileOnly) {
+      width: 100%;
+      box-shadow: rem(0 3px 6px) rgba($black, .13);
+      position: relative;
+      z-index: 4;
+      padding: rem(8px 15px);
+    }
+
+    @include susy-media(tablet) {
+      padding: rem(7px 0 0);
+    }
+
+    &__wrap {
+      @include susy-media(mobileOnly) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    a {
+      line-height: 0;
+
+      img {
+        width: rem(120px);
+
+        @include susy-media(desktop) {
+          width: rem(150px);
+        }
+
+        @include susy-media(mobileOnly) {
+          width: rem(80px);
+        }
+      }
+    }
+  }
+
+  &__menu {
+    @include susy-media(mobileOnly) {
+      position: absolute;
+      top: rem(58px);
+      width: 100%;
+      background-color: $white;
+      left: 0;
+      right: 0;
+      text-align: center;
+      display: none;
+
+      .container {
+        margin: 0;
+      }
+    }
+
+    @include susy-media(tablet) {
+      display: block !important;
+    }
+  }
+}
+
+.menu-responsive-icon {
+  background-color: #404549;
+  padding: rem(10px 8px);
+  border-radius: rem(3px);
+  line-height: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+
+  @include susy-media(tablet) {
+    display: none;
+  }
+
+  &.is-active {
+    .menu-icon i {
+      background-color: $white;
+      transition: .5s;
+
+      &:nth-child(1) {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: rem(12px);
+  position: relative;
+  width: rem(16px);
+
+  @include susy-media(desktop) {
+    display: none;
+  }
+
+  i {
+    background: $white;
+    height: rem(2px);
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    transition: .8s;
+    width: 100%;
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 100%;
+      opacity: 1;
+    }
+  }
+}

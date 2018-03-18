@@ -1,0 +1,95 @@
+.box-icon-vertical {
+  @extend .padding-component;
+  position: relative;
+
+  &__item {
+    border-radius: rem(6px);
+    box-shadow: 0 0 rem(10px) rgba($black, .12);
+    margin-bottom: rem(20px);
+    padding: rem(29px 15px 24px);
+    position: relative;
+    min-height: rem(162px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    border-radius: 50%;
+    font-size: rem(30px);
+    height: rem(60px);
+    left: rem(30px);
+    line-height: rem(60px);
+    position: absolute;
+    text-align: center;
+    top: rem(26px);
+    width: rem(60px);
+
+    i {
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    @include susy-media(tablet) {
+      padding-right: rem(70px);
+    }
+  }
+
+  &__content {
+    margin-bottom: rem(40px);
+    text-align: center;;
+
+    @include susy-media(tablet) {
+      text-align: left;
+      float: left;
+      margin-bottom: 0;
+      width: 50%;
+    }
+
+    @include susy-media(desktop) {
+      width: 40%;
+    }
+  }
+
+  &__list {
+    @include susy-media(tablet) {
+      float: right;
+      padding-left: rem(30px);
+      padding-top: rem(18px);
+      width: 50%;
+    }
+
+    @include susy-media(desktop) {
+      width: 43.8%;
+    }
+  }
+
+  &__group {
+    padding-left: rem(95px);
+  }
+
+  &__description {
+    p {
+      margin-bottom: rem(31px);
+    }
+  }
+
+  &__link {
+    margin-top: rem(30px);
+
+    @include susy-media(tablet) {
+      margin-top: rem(60px);
+    }
+  }
+
+  &__title-sub {
+    font-weight: 600;
+    margin-bottom: rem(7px);
+  }
+
+  &__body-sub {
+    line-height: rem(23px);
+  }
+}

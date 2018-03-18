@@ -1,0 +1,43 @@
+.tags {
+  ul {
+    padding: 0;
+    
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-bottom: rem(5px);
+      border: rem(1px) solid $silver;
+      font-size: rem(13px);
+      padding: rem(0 10px);
+      text-transform: uppercase;
+      transition: .5s;
+      font-weight: 400;
+      letter-spacing: rem(1px);
+      position: relative;
+
+      a:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: '';
+      }
+
+      * {
+        color: $gray-99;
+        transition: .5s;
+        padding: rem(5px) 0;
+      }
+
+      &:hover {
+        border-color: $gray-77;
+        transition: .5s;
+
+        * {
+          color: $gray-11;
+        }
+      }
+    }
+  }
+}

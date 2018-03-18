@@ -1,0 +1,161 @@
+%btn,
+.btn {
+  @include montserrat;
+  appearance: none;
+  background-color: $btn-color;
+  background-image: none;
+  border-radius: rem(6px);
+  border: rem(1px) solid $btn-color;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(13px);
+  font-weight: 400;
+  line-height: 1.8;
+  min-width: rem(100px);
+  outline: 0;
+  outline: none;
+  padding: rem(7.5px 25px);
+  text-align: center;
+  text-shadow: none;
+  text-transform: capitalize;
+  transition: all .3s ease;
+
+  @include susy-media(tablet) {
+    font-size: rem(14px);
+    padding: rem(11px 31px);
+  }
+
+  &:active,
+  &:hover {
+    background-color: $btn-color-hover;
+    border-color: $btn-color-hover;
+    color: $white;
+  }
+
+  // Size
+  &--large {
+    font-size: rem(15px);
+    padding: rem(10.5px 35px);
+  }
+
+  &--small {
+    padding: rem(7.5px 30px);
+    font-size: rem(16px);
+    font-weight: 400;
+    border-width: 1px;
+    text-transform: uppercase;
+  }
+
+  //Style
+  &--solid {
+    background-color: transparent;
+    border-color: $btn-color;
+    color: $btn-color;
+
+    &:hover {
+      background-color: $btn-color;
+      border-color:  $btn-color;
+      color: $white;
+    }
+  }
+
+  &--play {
+    span {
+      &:after {
+        @extend %icons;
+        content: "\e901";
+        padding-left: rem(5px);
+        font-size: 130%;
+        position: relative;
+        top: rem(2px);
+      }
+    }
+  }
+
+  &--popup {
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      font-size: 0;
+      transition: .5s;
+      transform: scale(1);
+
+      &:hover {
+        transition: .5s;
+        transform: scale(1.05);
+      }
+
+      &:before {
+        background-color: rgba($white, .5);
+        border-radius: 50%;
+        color: $primary-color;
+        font-size: rem(50px);
+
+        @include susy-media(tablet) {
+          font-size: rem(97px);
+        }
+      }
+    }
+
+    &-white {
+      span {
+        &:before {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // Color
+  &--bg-white {
+    background-color: $white;
+    color: $black;
+    border-color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border-color: $white;
+    }
+  }
+
+  &--solid-white {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      background-color: $btn-color;
+      color: $white;
+      border-color: $btn-color;
+    }
+  }
+
+  &--solid-green {
+    background-color: transparent;
+    color: $green;
+    border-color: $green;
+
+    &:hover {
+      background-color: $btn-color;
+      border-color:  $btn-color;
+      color: $white;
+    }
+  }
+
+  &--solid-red {
+    background-color: transparent;
+    color: $red;
+    border-color: $red;
+
+    &:hover {
+      background-color: $red;
+      border-color:  $red;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.box-content {
+  @extend .padding-component;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: rem(30px);
+  }
+
+  &__image {
+    margin-bottom: rem(30px);
+    width: 100%;
+
+    @include susy-media(tablet) {
+      width: 35%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    @extend .text--large;
+    margin-bottom: rem(10px);
+
+    @include susy-media(tablet) {
+      width: 58%;
+    }
+    
+
+    p {
+      margin-bottom: rem(20px);
+    }
+  }
+
+  .media-right {
+    .box-content {
+      &__image {
+        order: 2;
+      }
+
+      &__body {
+        order: 1;
+      }
+    }
+  }
+}

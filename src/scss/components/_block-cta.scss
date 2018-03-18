@@ -1,0 +1,53 @@
+.block-cta {
+  @extend %clearfix;
+  @extend .padding-component;
+  text-align: center;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    @include susy-media(tablet) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    @include susy-media(desktop) {
+      max-width: 57%;
+    }
+  }
+
+  &__title {
+    @extend .title--large;
+  }
+
+  &__body {
+    @extend .text--large;
+  }
+
+  &__link {
+    margin-top: rem(50px);
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+  }
+
+  &.with-bg-image {
+    @extend .text--white;
+  }
+}

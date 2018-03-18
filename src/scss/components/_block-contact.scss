@@ -1,0 +1,116 @@
+.block-contact {
+  padding: rem(30px 0 40px);
+  position: relative;
+
+  &:after {
+    background-color: #373739;
+    bottom: 0;
+    content: '';
+    height: 90%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    @include susy-media(tablet) {
+      height: 74.5%;
+    }
+  }
+
+  &__grid {
+    align-items: center;
+    border-radius: rem(5px);
+    box-shadow: rem(0 -5px 5px -5px) rgba(#373739, .5);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__image {
+    display: none;
+    height: rem(500px);
+    line-height: 0;
+    overflow: hidden;
+    border-radius: rem(5px 0 0 0);
+
+    @include susy-media(tablet) {
+      display: block;
+      width: 45%;
+    }
+
+    img {
+      left: 50%;
+      margin-bottom: 0;
+      max-width: inherit;
+      min-height: 100%;
+      position: relative;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__form {
+    padding: rem(30px);
+
+    @include susy-media(tablet) {
+      padding: rem(0 30px);
+      width: 55%;
+    }
+
+    @include susy-media(desktop) {
+      padding: rem(0 60px);
+    }
+
+    .form-item {
+      margin-bottom: rem(20px);
+
+      @include susy-media(tablet) {
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 50%;
+        }
+
+        &:nth-child(1) {
+          float: left;
+          padding-right: rem(10px);
+        }
+
+        &:nth-child(2) {
+          float: right;
+          padding-left: rem(10px);
+        }
+
+        &:nth-child(3) {
+          clear: both;
+        }
+      }
+
+      &.form-type-checkbox {
+      }
+    }
+
+    .form-actions {
+      margin-top: rem(35px);
+
+      @include susy-media(mobileOnly) {
+        text-align: center;
+      }
+    }
+
+    &__content {
+      margin-bottom: rem(30px);
+      padding: rem(0 10px);
+
+      @include susy-media(desktopWide) {
+        padding: rem(0 60px);
+      }
+    }
+  }
+
+  .form-type-checkbox label:before {
+    background-color: $white;
+  }
+}

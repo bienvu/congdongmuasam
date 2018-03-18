@@ -1,0 +1,65 @@
+// COLORS
+// Define all color variables in this document
+// Use http://chir.ag/projects/name-that-color/ for naming a color.
+
+$black: #000;
+$white: #fff;
+$silver: #ccc;
+$pigeon-post: #aec9de;
+$pigeon-post-light: rgba($pigeon-post, .75);
+
+// Gray
+$gray: #444444;
+$gray-18: #181818;
+$gray-25: #252525;
+$gray-11: #111;
+$gray-22: #222;
+$gray-0a: #0a0a0a;
+$gray-e0: #e0e0e0;
+$gray-e7: #e7e7e7;
+$gray-cd: #cdcdcd;
+$gray-c0: #c0c0c0;
+$gray-6d: #6d6e71;
+$gray-5f: #5f5f5f;
+$gray-3f: #3f3f3f;
+$gray-f1: #f1f1f1;
+$gray-78: #787878;
+$gray-55: #555555;
+$gray-77: #777;
+$gray-99: #999;
+$gray-6a: #6a6a6a;
+$gray-f5: #f5f5f5;
+$gray-dd: #dddddd;
+$gray-13: #131313;
+$gray-46: #464646;
+$gray-36: #363636;
+$gray-40: #404549;
+$gray-e6: #e6e7e8;
+$gray-95: #95989A;
+$gray-f8: #f8f8f8;
+$gray-59: #59595C;
+$gray-f0: #F0F2F2;
+$gray-dc: #DCE0E0;
+$gray-d4: #d4d6d6;
+
+// Red
+$red: #eb2621;
+
+$blue: #112146;
+
+$green: #1A696F;
+$green-dark: #175a5f;
+
+
+// Brand colors
+$primary-color: $green;
+$secondary-color: $red;
+$text-color: $gray-22;
+
+// Link color
+$link-color: $green;
+$link-color-hover: $secondary-color;
+
+// Button color
+$btn-color: $primary-color;
+$btn-color-hover: $green-dark;

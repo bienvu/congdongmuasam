@@ -1,0 +1,62 @@
+.box-testimonial {
+  @extend .padding-component;
+  text-align: center;
+
+  &__title {
+    @extend .title--large;
+  }
+
+  &__quote {
+    margin: 0 auto rem(30px);
+
+    @include susy-media(tablet) {
+      max-width: 60%;
+    }
+  }
+
+  &__meta {
+    color: $primary-color;
+    font-size: rem(16px);
+    font-weight: 500;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+}
+
+.text-column {
+  margin-top: rem(30px);
+  text-align: left;
+
+  @include susy-media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include susy-media(desktop) {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    @extend .text--large;
+    margin-top: rem(30px);
+
+    @include susy-media(tablet) {
+      width: 50%;
+      padding: rem(0 15px);
+    }
+
+    @include susy-media(desktop) {
+      width: auto;
+    }
+  }
+
+  &--4cols {
+    .text-column__item {
+      @include susy-media(desktop) {
+        width: 25%;
+      }
+    }
+  }
+}

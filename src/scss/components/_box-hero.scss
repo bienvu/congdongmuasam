@@ -1,0 +1,67 @@
+.box-hero {
+  @extend .text--white;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: rem(400px);
+  position: relative;
+  z-index: 2;
+
+  @include susy-media(tablet) {
+    min-height: rem(500px);
+  }
+
+  &.height-small {
+    min-height: 350px;
+  }
+
+  &__bg-image {
+    @extend %bg-image-style;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    height: calc(100% - 65px);
+    display: inline-block;
+
+    @include susy-media(tablet) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    @include susy-media(desktop) {
+      max-width: 68%;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(20px);
+  }
+
+  &__body {
+    @extend .text--large;
+    display: none;
+
+    @include susy-media(desktop) {
+      display: block;
+    }
+  }
+
+  &__btn-play {
+    margin-top: rem(16px);
+    display: inline-block;
+    margin-top: rem(60px);
+
+    @include susy-media(desktop) {
+      margin-top: rem(130px);
+    }
+  }
+
+  &__link {
+    @extend .link-down-style;
+    @extend .link-down-style--white;
+  }
+}

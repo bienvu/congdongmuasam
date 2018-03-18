@@ -1,0 +1,76 @@
+.box-50-50 {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__left,
+  &__right {
+    @extend .padding-component;
+    width: 100%;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+
+    @include susy-media(tablet) {
+      padding-left: rem(50px);
+      padding-right: rem(50px);
+    }
+
+    @include susy-media(desktopWide) {
+      width: 50%;
+      padding-left: rem(100px);
+      padding-right: rem(100px);
+    }
+  }
+
+  &__label {
+    text-align: center;
+    color: $gray-36;
+    font-weight: 700;
+    letter-spacing: rem(2px);
+  }
+
+  &__description {
+    font-size: rem(28px);
+    color: $primary-color;
+    font-weight: 700;
+    margin-top: rem(30px);
+  }
+}
+
+.technical {
+  display: flex;
+  flex-wrap: wrap;
+  
+  &__item {
+    width: 100%;
+    margin-top: rem(20px);
+
+    @include susy-media(tablet) {
+      margin-top: rem(30px);
+      width: calc((100% - 60px) / 3);
+      margin-right: rem(30px);
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__label {
+    border-bottom: rem(1px) solid $gray-36;
+    color: $gray-36;
+    font-size: rem(15px);
+  }
+
+  &__info {
+    font-size: rem(24px);
+    color: $primary-color;
+
+    @include susy-media(tablet) {
+      font-size: rem(22px);
+    }
+
+    @include susy-media(desktopSuperwide) {
+      font-size: rem(24px);
+    }
+  }
+}

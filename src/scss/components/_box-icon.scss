@@ -1,0 +1,78 @@
+.box-icon-horizontal {
+  @extend .padding-component;
+  position: relative;
+
+  .section-description,
+  .section-title {
+    @include susy-media(tablet) {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__bg-image {
+    background-size: 100% auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-position: center;
+    right: 0;
+    background-repeat: no-repeat;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: rem(80px);
+
+    @include susy-media(tablet) {
+      margin: rem(112px) rem(-1px) 0 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding: rem(68px 30px);
+    border: rem(1px) solid $gray-d4;
+    margin-bottom: rem(-1px);
+
+    @include susy-media(tablet) {
+      width: calc(100% /3);
+      min-height: rem(477px);
+      margin-left: rem(-1px);
+    }
+  }
+
+  &__icon {
+    color: $primary-color;
+    font-size: rem(60px);
+    margin-bottom: rem(9px);
+    line-height: 1;
+  }
+
+  &__title {
+    color: $primary-color !important;
+    font-weight: 600;
+    margin: 0 auto rem(10px);
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--full {
+    .box-icon-horizontal {
+      &__list {
+        margin: 0;
+      }
+
+      &__wrap {
+        max-width: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.box-image {
+  @extend .bg-image-overlay;
+  position: relative;
+  overflow: hidden;
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 100% 90%;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+
+    @include susy-media(desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @extend .padding-component;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    @include susy-media(mobileOnly) {
+      padding-top: 0;
+    }
+
+    @include susy-media(desktop) {
+      text-align: left;
+      width: 50%;
+      padding-left: rem(80px);
+    }
+
+    @include susy-media(desktopWide) {
+      padding-left: rem(120px);
+    }
+  }
+
+  &__label {
+    margin-bottom: rem(20px);
+    margin-top: rem(10px);
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__description {
+    @extend .text--large;
+    margin-bottom: rem(50px);
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__body {
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-top: rem(40px);
+  }
+
+  &__image {
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: rem(10px);
+    text-align: center;
+    margin-top: rem(40px);
+
+
+    @include susy-media(desktop) {
+      width: 50%;
+      margin: 0;
+    }
+
+    img {
+      height: auto;
+      width: auto;
+      max-height: rem(450px);
+      margin: 0 auto;
+
+      @include susy-media(mobileOnly) {
+        max-width: rem(400px);
+      }
+    }
+  }
+
+  &.with-bg-image {
+    @extend .text--white;
+    @extend .heading--white;
+
+    .box-image__label {
+      color: $primary-color;
+    }
+  }
+
+  &.media-right {
+    .box-image {
+      &__content {
+        order: 1;
+
+        @include susy-media(desktop) {
+          padding-right: rem(80px);
+          padding-left: 0;
+        }
+
+        @include susy-media(desktopWide) {
+          padding-right: rem(120px);
+        }
+      }
+
+      &__image {
+        order: 2;
+
+        @include susy-media(desktop) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

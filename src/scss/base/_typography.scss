@@ -1,0 +1,201 @@
+// TYPOGRAPHY
+// Define all typographic styles in this file.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.33;
+  font-weight: 400;
+  margin-bottom: rem(13px);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: rem(30px);
+  line-height: rem(40px);
+
+  @include susy-media(tablet) {
+    font-size: rem(45px);
+    line-height: rem(55px);
+  }
+}
+
+h2 {
+  font-size: rem(28px);
+  line-height: rem(40px);
+
+  @include susy-media(tablet) {
+    font-size: rem(38px);
+    line-height: rem(50px);
+  }
+}
+
+h3 {
+  font-size: rem(26px);
+
+  @include susy-media(tablet) {
+    font-size: rem(30px);
+  }
+}
+
+h4 {
+  font-size: rem(24px);
+}
+
+h5 {
+  font-size: rem(18px);
+}
+
+h6 {
+  font-size: rem(12px);
+  letter-spacing: rem(2px);
+}
+
+%link,
+.link {
+  color: $link-color;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:active,
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &--white {
+    color: $white;
+
+    &:active,
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+
+  &--gray {
+    color: $gray-5f;
+
+    &:active,
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &--red {
+    color: $link-color;
+
+    &:active,
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+
+  &--green {
+    color: $green;
+
+    &:active,
+    &:hover {
+      color: darken($green, 15%);
+    }
+  }
+}
+
+a {
+  @extend %link;
+}
+
+p {
+  margin-bottom: rem(15px);
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+}
+
+small {
+  font-size: smaller;
+}
+
+abbr {
+  border-bottom: 1px dotted $text-color;
+  cursor: help;
+}
+
+tt,
+code,
+kbd,
+samp {
+  font-family: monospace;
+}
+
+ol,
+ul {
+  padding-left: rem(40px);
+  margin-bottom: rem(10px);
+}
+
+label {
+  font-weight: 600;
+  font-size: rem(14px);
+}
+
+blockquote {
+  font-size: rem(18px);
+  line-height: 1.4;
+  margin-bottom: rem(30px);
+
+  &:before,
+  &:after {
+    @extend %icons;
+    font-size: rem(30px);
+    color: $silver;
+  }
+
+  &:before {
+    @extend .icon-quote-left:before;
+    margin-right: rem(10px);
+  }
+
+  &:after {
+    @extend .icon-quote-right:before;
+    margin-left: rem(20px);
+    display: inline-block;
+    margin-top: rem(-10px);
+    position: relative;
+    bottom: rem(-12px);
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
+figure {
+  line-height: 0;
+}

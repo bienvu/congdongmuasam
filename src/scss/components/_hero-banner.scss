@@ -1,0 +1,66 @@
+.hero-banner {
+  position: relative;
+  display: flex;
+  min-height: rem(400px);
+  position: relative;
+  z-index: 2;
+
+  @include susy-media(tablet) {
+    min-height: rem(500px);
+    align-items: center;
+  }
+
+  &__bg-image {
+    @extend %bg-image-style;
+    overflow-x: hidden;
+    background-position: 60% center;
+  }
+
+  &__content {
+    position: relative;
+    padding: rem(58px 0 60px);
+    text-align: center;
+
+    @include susy-media(tablet) {
+      max-width: 70%;
+      text-align: left;
+    }
+
+    @include susy-media(desktop) {
+      max-width: 50%;
+    }
+  }
+
+  &__body {
+    @extend .text--large;
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(24px);
+  }
+
+  &__link-more {
+    margin-top: rem(17px);
+
+    @include susy-media(mobileOnly) {
+      display: none;
+    }
+  }
+
+  &__btn-play {
+    margin-top: rem(16px);
+    display: inline-block;
+
+    @include susy-media(tablet) {
+      margin-top: rem(44px);
+    }
+  }
+
+  &__link {
+    @extend .link-down-style;
+  }
+}

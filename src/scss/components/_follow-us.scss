@@ -1,0 +1,17 @@
+.follow-us {
+  text-align: center;
+  margin: 0 auto;
+
+  &__title {
+    color: $primary-color;
+  }
+
+  &__description {
+    @extend .text--large;
+    margin-bottom: rem(40px);
+  }
+
+  &__image {
+    margin-bottom: rem(40px);
+  }
+}

@@ -1,0 +1,32 @@
+.sidekick-banner {
+  @extend .text--white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(300px);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  @include susy-media(tablet) {
+    height: 50vh;
+  }
+
+  &__bg-image {
+    @extend %bg-image-style;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    @include susy-media(tablet) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    @include susy-media(desktop) {
+      max-width: 68%;
+    }
+  }
+}

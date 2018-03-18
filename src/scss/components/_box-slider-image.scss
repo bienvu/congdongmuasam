@@ -1,0 +1,121 @@
+.box-slider-image {
+  .slick-dots {
+    @include susy-media(tablet) {
+      display: none!important;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    @include susy-media(desktop) {
+      height: auto;
+    }
+  }
+
+  .box-image {
+    @include susy-media(desktop) {
+      height: 100%;
+    }
+  }
+}
+
+.box-slider-image-nav {
+  @include susy-media(mobileOnly) {
+    display: none;
+  }
+
+  .slick-track {
+    border-bottom: rem(1px) solid $gray-dc;
+    margin-bottom: rem(5px);
+  }
+
+  .slick-current {
+    position: relative;
+    height: auto;
+
+    .progress {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:before {
+      content: '';
+      border-right: rem(1px) solid $gray-dc;
+      position: absolute;
+      top: 50%;
+      width: rem(1px);
+      height: calc(100% - 40px);
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &:last-child:before {
+      border: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    padding: rem(20px);
+    cursor: pointer;
+    height: 100%;
+    justify-content: center;
+
+    @include susy-media(desktopWide) {
+      padding: rem(20px 30px 20px 50px);
+    }
+  }
+
+  &__title {
+    font-size: rem(16px);
+    margin: 0;
+    display: none;
+
+    @include susy-media(desktop) {
+      display: block;
+    }
+
+    @include susy-media(desktopWide) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__image {
+    @include susy-media(desktop) {
+      margin-right: rem(10px);
+    }
+
+    @include susy-media(desktopWide) {
+      margin-right: rem(20px);
+    }
+
+    img {
+      max-width: rem(100px);
+      max-height: rem(85px);
+      width: auto;
+      height: auto;
+
+      @include susy-media(desktopWide) {
+        max-width: rem(130px);
+      }
+    }
+  }
+
+  .progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: $primary-color;
+    height: rem(3px);
+    width: 0%;
+    border-radius: rem(100px);
+    display: none;
+  }
+}

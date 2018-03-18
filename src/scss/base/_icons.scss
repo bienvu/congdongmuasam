@@ -1,0 +1,128 @@
+// ICONS.
+%icons {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'inviarobotics';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  &:before {
+    @extend %icons;
+  }
+}
+
+.icon-group:before {
+  content: "\e923";
+}
+.icon-two-arrow:before {
+  content: "\e91a";
+}
+.icon-graph:before {
+  content: "\e91b";
+}
+.icon-note:before {
+  content: "\e91c";
+}
+.icon-quare:before {
+  content: "\e91d";
+}
+.icon-watch:before {
+  content: "\e91e";
+}
+.icon-quare-solid:before {
+  content: "\e91f";
+}
+.icon-light:before {
+  content: "\e920";
+}
+.icon-box:before {
+  content: "\e921";
+}
+.icon-rocket-solid:before {
+  content: "\e922";
+}
+.icon-linkedin:before {
+  content: "\e919";
+}
+.icon-facebook:before {
+  content: "\e916";
+}
+.icon-twitter:before {
+  content: "\e917";
+}
+.icon-linkedin-square:before {
+  content: "\e918";
+}
+.icon-down:before {
+  content: "\e915";
+}
+.icon-video:before {
+  content: "\e914";
+}
+.icon-calendar-o:before {
+  content: "\e904";
+}
+.icon-calendar:before {
+  content: "\e912";
+}
+.icon-chevron-with-circle-up:before {
+  content: "\e90f";
+}
+.icon-chevron-with-circle-down:before {
+  content: "\e90e";
+}
+.icon-quote-right:before {
+  content: "\e90c";
+}
+.icon-quote-left:before {
+  content: "\e90d";
+}
+.icon-chevron-thin-down:before {
+  content: "\e90b";
+}
+.icon-chevron-thin-up:before {
+  content: "\e90a";
+}
+.icon-chevron-thin-left:before {
+  content: "\e910";
+}
+.icon-chevron-thin-right:before {
+  content: "\e911";
+}
+.icon-ruby:before {
+  content: "\e905";
+}
+.icon-checklist:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e908";
+}
+.icon-rocket:before {
+  content: "\e909";
+}
+.icon-time:before {
+  content: "\e913";
+}
+.icon-screen:before {
+  content: "\e907";
+}
+.icon-minus:before {
+  content: "\e902";
+}
+.icon-plus:before {
+  content: "\e903";
+}
+.icon-play-circle:before {
+  content: "\e901";
+}
+.icon-play:before {
+  content: "\e900";
+}
